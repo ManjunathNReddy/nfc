@@ -1,1 +1,1 @@
-This is the source of my personal website. It is based on a template by codewithsadee. I have tailored the template to my needs. The template is available for free on [codewithsadee.com](https://github.com/codewithsadee). 
+This is the source of my personal website. It is based on a template by codewithsadee. I have tailored the template to my needs. The template is available for free here: [codewithsadee](https://github.com/codewithsadee). 

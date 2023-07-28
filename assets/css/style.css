@@ -869,7 +869,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .footer-top {
-  display: grid;
+  display: inline-flex;
   gap: 20px;
 }
 
@@ -1253,7 +1253,7 @@ body.nav-active { overflow: hidden; }
   .footer-top { grid-template-columns: repeat(3, 1fr); }
 
   .footer-bottom {
-    display: grid;
+    display: inline-flexbox;
     grid-template-columns: 1fr 1fr;
   }
 

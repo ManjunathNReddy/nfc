@@ -94,11 +94,33 @@
         - #ARTICLE
       -->
       <div class="container">
-        <h2 class="headline">
-          Heading
-        </h2>
         <p class="section-text">
-          content
+          I had never really paid much attention to Minesweeper for a long time. My first experience with the game was when a friend introduced it to me at university. It seemed like a simple game at first, and I didn't think much of it. However, after implementing a command line version of it, I started to appreciate the <b>explosive</b> complexity and strategy involved in Minesweeper.
+        </p>
+        <h2 class="headline">
+          How to play
+        </h2><br> 
+        Minesweeper is a puzzle game where you have to uncover a grid of squares without clicking on any mines. Here are the basic rules:<br><br>
+
+        <ul>
+          <li>The game is played on a grid of innocent looking squares. Some of these guys contain mines.</li>
+          <li>The numbers on squares tell you how many mines are lurking around.</li>
+          <li>You can uncover a square by clicking on it. If you uncover a mine, ka-BOOM, you lose.</li>
+          <li>If you uncover all of the squares without clicking on any mines, ka-BOOM... no, wait, you win.</li>
+        </ul>  
+        
+        <br><br><h2 class="headline">
+          The Complexity
+        </h2><br>
+        One of the first challenges of Minesweeper is simply figuring out where the mines are. The numbers on the squares tell you how many mines are adjacent to that square, but that's not always enough information. For example, a square with a 3 next to it could mean that there are 3 mines adjacent to it, or it could mean that there are 2 mines and 1  empty square adjacent to it.
+        <br><br>
+        To make matters more complicated, the mines are not placed like confetti at a party (Hey, that rhymes!). They are placed in a way that ensures that there is at least one clear path from the top left corner of the grid to the bottom right corner. This means that players can't just randomly click on squares and hope to win. They need to use logic and probability (Brains) to figure out where the mines are.
+        <br><br>
+        The game can be modeled as a constraint satisfaction problem (CSP). CSPs are a type of problem in which you have a set of variables, and each variable has a set of possible values. The goal is to find a combination of values for the variables that satisfies all of the constraints.
+        <br><br>
+        The Minesweeper CSP is NP-complete, which means that it is very difficult to solve, yet easy to verify its solution. In fact, it is believed that there is no polynomial-time algorithm for solving Minesweeper.
+        <br><br>
+        One common technique to solve Minesweeper is to use a backtracking algorithm. Backtracking algorithms start with a guess, and then they explore all of the possible consequences of that guess. If the guess leads to a dead end, the algorithm backtracks and tries a different guess.     
       </div>
       </article>   
   </main>

@@ -1,6 +1,7 @@
+/* Import font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
 
-/* Global variables */
+/* Variables */
 :root {
   --primary: #ff5555;
   --primary-hover: #e43232;
@@ -17,12 +18,7 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-
-/* Prevent header from overlapping content on anchor scroll */
-html {
-  scroll-padding-top: 90px;
+  scroll-padding-top: 90px; /* Prevent header overlap */
 }
 
 body {
@@ -35,24 +31,19 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--dark-primary);
+  background: var(--dark-primary);
   padding: 18px 5vw;
   color: #fff;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
   min-height: 60px;
-}
-
-header div > a {
-  text-decoration: none;
+  flex-wrap: wrap;
 }
 
 header .logo {
   color: var(--primary);
-  margin-right: 0;
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 22px;
@@ -61,8 +52,6 @@ header .logo {
 header ul {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 header ul li {
@@ -79,6 +68,10 @@ header ul li a {
   font-weight: 600;
   font-size: 16px;
   transition: color 0.2s;
+}
+
+header a {
+  text-decoration: none;
 }
 
 header ul li a:hover {
@@ -105,14 +98,33 @@ header ul li a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  header {
+    padding: 10px 3vw;
+    min-height: 50px;
+  }
+  header .logo {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  header ul {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+  header ul li {
+    margin: 0 10px 0 0;
+  }
+}
+
 /* Hero Section */
 section.hero-section {
-  background-color: var(--dark-primary);
+  background: var(--dark-primary);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 110px 10vw 50px 10vw; /* Top padding for fixed header */
+  padding: 110px 10vw 50px 10vw;
   min-height: 60vh;
   gap: 2rem;
   flex-wrap: wrap;
@@ -123,7 +135,9 @@ section.hero-section {
   min-width: 250px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 .hero-section__title {
@@ -159,6 +173,7 @@ section.hero-section {
   margin-left: 30px;
 }
 
+/* Social Icons & Buttons */
 .social-icons,
 .hero-buttons {
   display: flex;
@@ -166,15 +181,11 @@ section.hero-section {
   align-items: center;
   width: 100%;
   gap: 16px;
-}
-
-.social-icons {
-  margin: 18px 0;
+  margin: 0 0 10px 0;
 }
 
 ul.social-icons {
   list-style: none;
-  display: flex;
   padding: 0;
 }
 
@@ -190,15 +201,15 @@ ul.social-icons {
 }
 
 .social-icons li:hover {
-  background-color: var(--primary);
-  transition: all 0.3s ease 0s;
+  background: var(--primary);
+  transition: all 0.3s;
 }
 
 .social-icons li a {
-  text-decoration: none;
   color: #fff;
   font-size: 18px;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s;
+  text-decoration: none;
 }
 
 .hero-buttons button {
@@ -214,28 +225,27 @@ ul.social-icons {
   color: #fff;
 }
 
-/* buttons */
+/* Buttons */
 .btn {
   padding: 10px 20px;
   border-radius: 2px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s;
 }
 
 .btn.btn-primary {
-  background-color: var(--primary);
+  background: var(--primary);
   color: var(--dark-primary);
   font-weight: 600;
 }
 
 .btn.btn-primary:hover {
-  background-color: var(--primary-hover);
-  transition: all 0.3s ease 0s;
+  background: var(--primary-hover);
 }
 
 .btn-dark-outlined {
-  background-color: var(--dark-primary);
+  background: var(--dark-primary);
   border: 1px solid var(--primary);
   color: var(--primary);
   border-radius: 5px;
@@ -243,15 +253,13 @@ ul.social-icons {
 }
 
 .btn-dark-outlined:hover {
-  cursor: pointer;
-  background-color: var(--primary);
+  background: var(--primary);
   color: #fff;
-  transition: all 0.3s ease 0s;
 }
 
 /* Projects Section */
 section.projects-section {
-  background-color: var(--dark-primary);
+  background: var(--dark-primary);
   color: #fff;
   padding: 50px 10vw;
 }
@@ -274,9 +282,9 @@ section.projects-section {
   width: 33.33%;
   margin: 35px 0;
   padding: 33px;
-  background-color: var(--dark-secondary);
+  background: var(--dark-secondary);
   border-radius: 5px;
-  transition: all 0.5s ease 0s;
+  transition: all 0.5s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -284,7 +292,6 @@ section.projects-section {
 
 .projects-card-box:hover {
   box-shadow: 3px 5px 20px #613026;
-  transition: all 0.5s ease 0s;
   transform: translateY(-2px);
 }
 
@@ -297,8 +304,7 @@ section.projects-section {
 
 .projects-card-box:hover .projects-card-box__icons > i {
   color: var(--primary);
-  background-color: var(--dark-primary);
-  transition: all 0.5s ease 0s;
+  background: var(--dark-primary);
 }
 
 .projects-card-box__desc h4 {
@@ -318,10 +324,6 @@ section.projects-section {
   align-items: center;
 }
 
-.projects-card-box__buttons button {
-  background-color: var(--dark-secondary);
-}
-
 .projects-card-box__buttons button > a {
   text-decoration: none;
   font-size: 13px;
@@ -330,7 +332,7 @@ section.projects-section {
 
 /* Footer */
 footer {
-  background-color: var(--dark-primary);
+  background: var(--dark-primary);
   color: gray;
   text-align: center;
   padding: 15px 0;
@@ -338,12 +340,12 @@ footer {
 }
 
 footer a {
-  text-decoration: none;
   color: var(--primary);
+  text-decoration: none;
 }
 
 /* --- Responsive Styles --- */
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
   section.hero-section {
     padding: 90px 4vw 40px 4vw;
   }
@@ -352,7 +354,7 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media (max-width: 900px) {
   section.hero-section {
     flex-direction: column;
     align-items: center;
@@ -369,28 +371,12 @@ footer a {
     margin-left: 0;
     width: 80vw;
     max-width: 350px;
-    height: auto;
-    display: block;
-  }
-  .hero-section > div:first-child {
-    min-width: 0;
-    align-items: center;
-    width: 100%;
   }
   .hero-section__title {
     font-size: 32px;
   }
   .hero-section__desc {
     font-size: 16px;
-  }
-  .social-icons,
-  .hero-buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .hero-buttons button {
-    margin: 0 0 10px 0;
-    width: 100%;
   }
   .projects-cards {
     flex-direction: column;
@@ -404,10 +390,8 @@ footer a {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 900px) {
   header {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 10px 3vw;
     min-height: 50px;
   }
@@ -416,15 +400,15 @@ footer a {
     margin-bottom: 8px;
   }
   header ul {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
   }
   header ul li {
-    margin: 7px 0;
+    margin: 0 10px 0 0;
   }
   section.hero-section {
-    padding: 110px 3vw 15px 3vw; 
+    padding: 110px 3vw 15px 3vw;
     gap: 1rem;
   }
   .hero-section__title {
@@ -436,7 +420,6 @@ footer a {
   .hero-img img {
     width: 95vw;
     max-width: 180px;
-    margin-left: 0;
   }
   .projects-section h2 {
     font-size: 20px;
@@ -459,20 +442,9 @@ footer a {
   }
 }
 
-/* Always align all hero-section content to the center on all screens */
-.hero-section > div:first-child {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center all child elements horizontally */
-  width: 100%;
-  text-align: center;   /* Center text like "I'm Manjunath" */
-}
-
-/* Ensure social-icons and hero-buttons are centered and stacked below the title */
-.social-icons,
-.hero-buttons {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 0 10px 0;
+@media (max-width: 900px) {
+  .social-icons {
+    flex-direction: row !important;
+    gap: 16px !important;
+  }
 }

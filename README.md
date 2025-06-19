@@ -1,1 +1,8 @@
-This is the source of my personal website. It is based on a template by codewithsadee. I have tailored the template to my needs. The template is available for free here: [codewithsadee](https://github.com/codewithsadee). 
+# Manjunath Reddy Portfolio
+
+Simple portfolio webpage crafted with HTML and CSS
+
+##### Connect with me on:
+
+- [Linked-in](https://www.linkedin.com/in/nmanjunathreddy/)
+- [Github](https://github.com/ManjunathNReddy)
